@@ -1,0 +1,203 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1, viewport-fit=cover">
+<title>Karnataka Tourism Guide</title>
+<style>
+:root{--bg:#f6f1e4;--card:#fffdf6;--tx:#1f2a24;--mut:#5d6b62;--ac:#0b6b4f;--ac2:#c8561a;--bd:#ddd3b8;--gem:#6b2fa0;box-sizing:border-box;padding-top:env(safe-area-inset-top,0px);padding-bottom:env(safe-area-inset-bottom,0px)}
+@media (prefers-color-scheme:dark){:root:not([data-theme="light"]){--bg:#14201a;--card:#1c2b23;--tx:#eef2e8;--mut:#a5b5a8;--ac:#4fd1a1;--ac2:#ff9a5c;--bd:#33463b;--gem:#c9a0ff}}
+:root[data-theme="dark"]{--bg:#14201a;--card:#1c2b23;--tx:#eef2e8;--mut:#a5b5a8;--ac:#4fd1a1;--ac2:#ff9a5c;--bd:#33463b;--gem:#c9a0ff}
+*{box-sizing:border-box}html{scroll-padding-top:env(safe-area-inset-top,0px)}
+body{margin:0;background:var(--bg);color:var(--tx);font:16px/1.55 Georgia,"Times New Roman",serif}
+h1,h2,h3,button,select,input,.btn{font-family:"Trebuchet MS",Verdana,sans-serif}
+.hide{display:none!important}
+#login{position:relative;overflow:hidden;min-height:100vh;display:flex;align-items:center;justify-content:center;padding:20px;background:linear-gradient(180deg,#f7c98b 0%,#e98f5a 55%,#b84a3a 100%)}
+.bgm{position:absolute;inset:0;width:100%;height:100%}.hero{position:relative;height:150px;overflow:hidden;background:linear-gradient(180deg,#f7c98b,#e98f5a)}.hero svg{position:absolute;inset:0;width:100%;height:100%}.hero h2{position:absolute;left:18px;right:18px;bottom:14px;margin:0;color:#fff;font-size:22px;text-shadow:0 2px 8px rgba(0,0,0,.6);z-index:2}
+.lbox{position:relative;z-index:1;background:var(--card);border-radius:18px;padding:28px;max-width:380px;width:100%;box-shadow:0 14px 40px rgba(0,0,0,.35)}
+.lbox h1{margin:0 0 4px;font-size:28px;color:var(--ac)}.lbox p{margin:0 0 16px;color:var(--mut)}
+input,select{width:100%;padding:11px 12px;margin:0 0 10px;border:1px solid var(--bd);border-radius:10px;background:var(--bg);color:var(--tx);font-size:15px}
+button,.btn{display:inline-block;border:0;border-radius:10px;padding:10px 14px;background:var(--ac);color:#fff;font-size:14px;cursor:pointer;text-decoration:none;margin:3px 3px 3px 0}
+:root[data-theme="dark"] button,:root[data-theme="dark"] .btn{color:#10261c}
+.sec{background:transparent;color:var(--ac);border:1px solid var(--ac)}
+.o{background:var(--ac2)}
+button:focus-visible,.btn:focus-visible,input:focus-visible,select:focus-visible{outline:3px solid var(--ac2);outline-offset:2px}
+.err{color:#c0392b;font-size:14px;min-height:20px}
+header{display:flex;justify-content:space-between;align-items:center;padding:14px 18px;background:var(--ac);color:#fff}
+header h1{margin:0;font-size:20px}header button{background:#ffffff26;color:#fff}
+main{max-width:1100px;margin:0 auto;padding:16px}
+.bar{display:grid;grid-template-columns:repeat(auto-fit,minmax(200px,1fr));gap:10px;align-items:center}
+.bar label{font-size:14px;color:var(--mut)}
+.plan{background:var(--card);border:1px dashed var(--ac);border-radius:14px;padding:14px;margin:8px 0 18px}
+.plan h2{margin:0 0 8px;font-size:17px}
+.grid{display:grid;grid-template-columns:repeat(auto-fill,minmax(250px,1fr));gap:14px}
+.card{background:var(--card);border:1px solid var(--bd);border-radius:14px;padding:14px;display:flex;flex-direction:column;gap:6px}
+.card h3{margin:0;font-size:17px}.mut{color:var(--mut);font-size:14px}
+.tag{display:inline-block;font-size:12px;padding:2px 9px;border-radius:99px;border:1px solid var(--bd);font-family:"Trebuchet MS",sans-serif}
+.gem{border-color:var(--gem);color:var(--gem);font-weight:bold}
+#modal{position:fixed;inset:0;background:rgba(0,0,0,.55);display:flex;align-items:flex-end;justify-content:center;z-index:20;padding-top:env(safe-area-inset-top,0px)}
+.mbox{background:var(--card);width:100%;max-width:720px;max-height:92vh;overflow:auto;border-radius:18px 18px 0 0;padding:18px 18px calc(24px + env(safe-area-inset-bottom,0px))}
+.mbox h2{margin:0 0 4px}.mbox h3{margin:16px 0 6px;font-size:15px;color:var(--ac)}
+.ph{width:100%;height:auto;border-radius:10px;display:block;margin-bottom:4px}
+.row{display:flex;justify-content:space-between;gap:8px;align-items:center;border-bottom:1px solid var(--bd);padding:7px 0;flex-wrap:wrap}
+</style>
+</head>
+<body>
+<svg width="0" height="0" style="position:absolute" aria-hidden="true"><symbol id="klogo" viewBox="0 0 100 120"><polygon points="22,10 50,2 72,8 80,22 74,36 78,50 82,64 76,76 70,90 64,104 52,116 44,108 40,96 30,84 24,66 20,50 24,36 18,22" fill="currentColor" stroke="currentColor" stroke-width="3" stroke-linejoin="round"/><path d="M50 30c-11 0-19 8-19 18 0 14 19 34 19 34s19-20 19-34c0-10-8-18-19-18z" fill="#c8561a" stroke="#fff" stroke-width="2.5"/><circle cx="50" cy="48" r="7" fill="#fff"/></symbol><symbol id="kmt" viewBox="0 0 800 300" preserveAspectRatio="xMidYMax slice"><circle cx="600" cy="90" r="40" fill="#fff3c4" opacity=".9"/><polygon points="0,300 0,170 110,90 200,150 300,70 420,160 520,100 640,170 740,110 800,150 800,300" fill="#8fb8a8"/><polygon points="0,300 0,210 90,140 190,200 330,120 450,200 560,150 700,210 800,160 800,300" fill="#4a8a66"/><polygon points="0,300 0,250 120,210 240,255 380,200 520,260 660,215 800,255 800,300" fill="#1f4d3a"/></symbol></svg>
+<section id="login"><svg class="bgm" aria-hidden="true"><use href="#kmt"/></svg>
+ <div class="lbox">
+  <div style="display:flex;align-items:center;gap:12px;margin-bottom:6px"><svg width="58" height="70" style="color:var(--ac)" role="img" aria-label="Karnataka map logo"><use href="#klogo"/></svg><h1 style="margin:0">Karnataka Tourism</h1></div>
+  <p>Log in to explore places district by district, find hidden gems and plan your route.</p>
+  <input id="uname" placeholder="Your name" autocomplete="name">
+  <input id="uid" placeholder="Mobile number or email" autocomplete="username">
+  <input id="upw" type="password" placeholder="Password (min 4 characters)" autocomplete="current-password">
+  <div class="err" id="lerr"></div>
+  <button id="lbtn" style="width:100%">Log in</button>
+  <p class="mut" style="margin:12px 0 0;font-size:13px">Demo login: details stay in this browser only. No account is created.</p>
+ </div>
+</section>
+
+<section id="app" class="hide">
+ <header><div style="display:flex;align-items:center;gap:10px"><svg width="30" height="36" style="color:#fff" role="img" aria-label="Karnataka map logo"><use href="#klogo"/></svg><h1 id="hi">Karnataka Tourism</h1></div><button id="out">Log out</button></header>
+ <div class="hero"><svg aria-hidden="true"><use href="#kmt"/></svg><h2>Explore Karnataka’s hills, forests and coasts</h2></div>
+ <main>
+  <div class="bar">
+   <div><label for="dist">District</label><select id="dist"></select></div>
+   <div><label for="q">Search places</label><input id="q" placeholder="e.g. falls, temple, fort"></div>
+   <div><label><input type="checkbox" id="gemonly" style="width:auto;margin-right:6px">Hidden gems only</label></div>
+  </div>
+  <div class="plan">
+   <h2>Distance between two places</h2>
+   <div class="bar"><select id="pa"></select><select id="pb"></select><button id="pgo">Show distance</button></div>
+   <div id="pres" class="mut"></div>
+  </div>
+  <div id="count" class="mut" style="margin-bottom:8px"></div>
+  <div class="grid" id="grid"></div>
+ </main>
+</section>
+
+<div id="modal" class="hide"><div class="mbox" id="mbox"></div></div>
+
+<script>
+// name, district, lat, lng, hidden gem (1/0), description
+var P=[
+["Lalbagh Botanical Garden","Bengaluru Urban",12.9507,77.5848,0,"Historic 240-acre garden with a glasshouse and twice-yearly flower shows."],
+["Bangalore Palace","Bengaluru Urban",12.9988,77.5921,0,"Tudor-style royal palace with carved wooden interiors and wide lawns."],
+["Savandurga Hill","Ramanagara",12.9227,77.2967,1,"One of Asia’s largest monolith hills. A steep trek with views over the Arkavathi valley."],
+["Mysore Palace","Mysuru",12.3052,76.6552,0,"Grand Indo-Saracenic palace, lit by about 100,000 bulbs on Sundays and during Dasara."],
+["Chamundi Hills","Mysuru",12.2724,76.6709,0,"Hilltop Chamundeshwari temple and the giant Nandi statue, with city views."],
+["Somanathapura Temple","Mysuru",12.2756,76.8667,1,"Quiet 13th-century Hoysala temple with star-shaped plan and fine stone carving."],
+["Bandipur National Park","Chamarajanagar",11.67,76.63,0,"Tiger reserve with elephants, gaurs and deer. Safari runs through dry forest."],
+["BR Hills","Chamarajanagar",11.98,77.14,1,"Forested hills with tigers, a hilltop temple and cool misty viewpoints."],
+["Brindavan Gardens","Mandya",12.4244,76.5726,0,"Terraced garden below the KRS dam, famous for its evening musical fountain."],
+["Ranganathaswamy Temple, Srirangapatna","Mandya",12.4231,76.6805,0,"Ancient island temple on the Kaveri, near Tipu Sultan’s historic sites."],
+["Abbey Falls","Kodagu",12.4547,75.7157,0,"Waterfall tumbling through coffee and spice estates near Madikeri."],
+["Raja’s Seat","Kodagu",12.4244,75.7382,0,"Garden viewpoint in Madikeri where Kodagu kings watched the sunset."],
+["Tadiandamol Peak","Kodagu",12.23,75.74,1,"Kodagu’s highest peak. A grassy trek above the clouds, best after the monsoon."],
+["Virupaksha Temple, Hampi","Vijayanagara",15.335,76.46,0,"Living temple in the Vijayanagara capital, a UNESCO World Heritage Site."],
+["Vittala Temple, Hampi","Vijayanagara",15.3425,76.4753,0,"Home of the iconic stone chariot and musical pillars."],
+["Anegundi","Koppal",15.35,76.49,1,"Village across the Tungabhadra with Hampi-era ruins, rice fields and Hanuman’s birthplace hill."],
+["Mullayanagiri","Chikkamagaluru",13.3915,75.7216,0,"Karnataka’s highest peak at 1,930 m, with a short climb to the top."],
+["Kudremukh","Chikkamagaluru",13.1333,75.25,1,"Horse-face-shaped peak in a rolling grassland national park. Trek with a local guide."],
+["Udupi Sri Krishna Temple","Udupi",13.3409,74.7421,0,"Famous temple town, known for its temple kitchen and Udupi cuisine."],
+["Kaup Beach","Udupi",13.215,74.748,0,"Quiet beach with a historic lighthouse and red-rock outcrops."],
+["St Mary’s Island","Udupi",13.379,74.672,1,"Hexagonal basalt columns on a small island off Malpe. Reached by ferry."],
+["Murudeshwar","Uttara Kannada",14.0942,74.485,0,"Giant Shiva statue and temple on a cape surrounded by the Arabian Sea."],
+["Om Beach, Gokarna","Uttara Kannada",14.518,74.319,0,"Beach shaped like the Om symbol, with cliff cafes and quiet coves nearby."],
+["Yana Caves","Uttara Kannada",14.578,74.556,1,"Black crystalline limestone rocks rising from dense Western Ghats forest."],
+["Jog Falls","Shivamogga",14.2294,74.8127,0,"One of India’s highest plunge waterfalls. At its best in monsoon."],
+["Dharmasthala","Dakshina Kannada",12.9614,75.3806,0,"Pilgrim town with Manjunatha Temple, known for free meals for all visitors."],
+["Gokak Falls","Belagavi",16.19,74.82,0,"Horseshoe-shaped waterfall on the Ghataprabha with a hanging bridge."],
+["Gol Gumbaz","Vijayapura",16.8302,75.7358,0,"Tomb with one of the world’s largest domes and a famous whispering gallery."],
+["Badami Cave Temples","Bagalkot",15.9186,75.676,0,"Rock-cut Chalukya caves above a sandstone-ringed lake."],
+["Pattadakal","Bagalkot",15.949,75.816,0,"UNESCO site with a group of 7th–8th century Chalukya temples."],
+["Aihole","Bagalkot",15.95,75.88,0,"Cradle of temple architecture, with over 100 early Chalukya temples."],
+["Lakkundi","Gadag",15.39,75.73,1,"Village of Kalyani Chalukya temples and richly carved stepwells, mostly empty of crowds."],
+["Belur Chennakeshava Temple","Hassan",13.165,75.865,0,"Hoysala masterpiece with intricately carved bracket figures."],
+["Halebidu","Hassan",13.2128,75.9941,0,"Former Hoysala capital with the detailed Hoysaleswara Temple."],
+["Shravanabelagola","Hassan",12.854,76.484,0,"Jain pilgrimage site with the 57-foot monolithic Gommateshwara statue."],
+["Chitradurga Fort","Chitradurga",14.2226,76.398,0,"Massive stone fort with seven rings of walls, temples and secret passages."],
+["Bidar Fort","Bidar",17.912,77.516,0,"Bahmani-era fort with Rangeen Mahal, Persian-style tilework and wide moats."],
+["Nandi Hills","Chikkaballapura",13.3702,77.6835,0,"Hill fortress known for sunrise views above the clouds, close to Bengaluru."],
+["Skandagiri","Chikkaballapura",13.414,77.682,1,"Night trek to a hilltop ruin for sunrise above a sea of clouds."],
+["Devarayanadurga","Tumakuru",13.37,77.17,1,"Forested hill with two temples, a hill fort and cool views."]
+];
+var $=function(i){return document.getElementById(i)};
+var KM_H=45;
+function hav(a,b){var R=6371,r=Math.PI/180,dl=(b[2]-a[2])*r,dg=(b[3]-a[3])*r;
+ var x=Math.sin(dl/2)*Math.sin(dl/2)+Math.cos(a[2]*r)*Math.cos(b[2]*r)*Math.sin(dg/2)*Math.sin(dg/2);
+ return 2*R*Math.asin(Math.sqrt(x))*1.25}
+function dur(km){var m=Math.round(km/KM_H*60);return m<60?m+" min":Math.floor(m/60)+" h "+(m%60)+" min"}
+function pt(p){return p[2]+","+p[3]}
+function mapL(p){return "https://www.google.com/maps/search/?api=1&query="+pt(p)}
+function dirL(a,b){return "https://www.google.com/maps/dir/?api=1&origin="+pt(a)+"&destination="+pt(b)+"&travelmode=driving"}
+function nearL(w,p){return "https://www.google.com/maps/search/?api=1&query="+w+"+near+"+pt(p)}
+function vidL(p){return "https://www.youtube.com/results?search_query="+encodeURIComponent(p[0]+" "+p[1]+" Karnataka travel")}
+
+var C={w:["#bfe3f0",'<polygon points="0,120 0,50 80,30 140,70 220,25 300,55 300,120" fill="#2f6f4e"/><rect x="128" y="45" width="28" height="75" fill="#fff" opacity=".9"/><rect x="120" y="108" width="44" height="12" fill="#8fd0e8"/>'],b:["#ffd9a0",'<circle cx="230" cy="34" r="18" fill="#ff9a3c"/><rect y="60" width="300" height="36" fill="#2a7fa8"/><rect y="96" width="300" height="24" fill="#e9cf94"/><path d="M40 96 q4 -26 14 -34 M40 96 q-14 -20 -26 -22 M40 96 q18 -16 30 -14" stroke="#2d6a3a" stroke-width="5" fill="none"/>'],f:["#cfd8e6",'<rect y="96" width="300" height="24" fill="#7a8a5a"/><rect x="70" y="50" width="160" height="54" fill="#8c7355"/><path d="M70 50 v-10 h14 v10 h14 v-10 h14 v10 h14 v-10 h14 v10 h14 v-10 h14 v10 h14 v-10 h14 v10 h14 v-10 h14 v10" fill="#8c7355"/><rect x="135" y="72" width="30" height="32" rx="15" fill="#3b2f22"/>'],h:["#cfe6f5",'<polygon points="0,120 70,40 120,90 190,20 300,120" fill="#3f7d5a"/><polygon points="190,20 170,50 190,44 205,52" fill="#fff" opacity=".85"/><polygon points="0,120 40,80 90,120" fill="#2c5f43"/>'],t:["#f9d9a6",'<rect y="100" width="300" height="20" fill="#b9915c"/><polygon points="110,100 190,100 180,80 120,80" fill="#c8561a"/><polygon points="120,80 180,80 172,62 128,62" fill="#d8742e"/><polygon points="128,62 172,62 164,46 136,46" fill="#e89049"/><polygon points="136,46 164,46 150,22" fill="#f2ac62"/>'],r:["#a8d5a2",'<rect y="96" width="300" height="24" fill="#5a8f4a"/><circle cx="60" cy="60" r="30" fill="#2f6f3a"/><circle cx="130" cy="52" r="36" fill="#3b8548"/><circle cx="215" cy="58" r="32" fill="#2f6f3a"/><rect x="55" y="80" width="8" height="20" fill="#5b3f25"/><rect x="126" y="80" width="8" height="20" fill="#5b3f25"/><rect x="211" y="80" width="8" height="20" fill="#5b3f25"/>'],g:["#d5ecc8",'<rect y="84" width="300" height="36" fill="#58a05a"/><circle cx="60" cy="96" r="7" fill="#e8497a"/><circle cx="110" cy="104" r="7" fill="#f2b632"/><circle cx="170" cy="94" r="7" fill="#fff"/><circle cx="230" cy="106" r="7" fill="#e8497a"/><circle cx="150" cy="46" r="24" fill="#3b8548"/><rect x="146" y="60" width="8" height="30" fill="#5b3f25"/>']};
+function ill(p){var s=(p[0]+" "+p[5]).toLowerCase(),t="g";
+ if(/falls|waterfall/.test(s))t="w";else if(/beach|island/.test(s))t="b";else if(/fort/.test(s))t="f";else if(/peak|hill|trek|giri/.test(s))t="h";else if(/temple|palace|gumbaz|dharmasthala|murudeshwar|belur|halebidu|shravana|caves/.test(s))t="t";else if(/park|forest/.test(s))t="r";
+ return '<svg viewBox="0 0 300 120" class="ph" role="img" aria-label="Illustration of '+p[0]+'"><rect width="300" height="120" fill="'+C[t][0]+'"/>'+C[t][1]+'</svg>'}
+function phL(p){return "https://www.google.com/search?tbm=isch&q="+encodeURIComponent(p[0]+" "+p[1]+" Karnataka")}
+// login
+$("lbtn").onclick=function(){
+ var n=$("uname").value.trim(),i=$("uid").value.trim(),w=$("upw").value;
+ if(!n||!i||w.length<4){$("lerr").textContent="Enter your name, mobile or email, and a password of at least 4 characters.";return}
+ try{localStorage.setItem("ktg_user",n)}catch(e){}
+ enter(n)};
+$("out").onclick=function(){try{localStorage.removeItem("ktg_user")}catch(e){}
+ $("app").classList.add("hide");$("login").classList.remove("hide");$("upw").value=""};
+function enter(n){$("login").classList.add("hide");$("app").classList.remove("hide");$("hi").textContent="Welcome, "+n;render()}
+
+// setup
+var ds=[];P.forEach(function(p){if(ds.indexOf(p[1])<0)ds.push(p[1])});ds.sort();
+$("dist").innerHTML='<option value="">All districts ('+ds.length+')</option>'+ds.map(function(d){return '<option>'+d+'</option>'}).join("");
+var opts=P.map(function(p,i){return '<option value="'+i+'">'+p[0]+'</option>'}).join("");
+$("pa").innerHTML=opts;$("pb").innerHTML=opts;$("pb").selectedIndex=1;
+["dist","q","gemonly"].forEach(function(i){$(i).oninput=render;$(i).onchange=render});
+$("pgo").onclick=function(){
+ var a=P[+$("pa").value],b=P[+$("pb").value];
+ if(a===b){$("pres").textContent="Choose two different places.";return}
+ var d=hav(a,b);
+ $("pres").innerHTML="About <b>"+Math.round(d)+" km</b> by road, roughly "+dur(d)+" by car. <a class='btn sec' target='_blank' rel='noopener' href='"+dirL(a,b)+"'>Route on Google Maps</a>"};
+
+function render(){
+ var d=$("dist").value,q=$("q").value.toLowerCase(),g=$("gemonly").checked;
+ var l=P.map(function(p,i){return [p,i]}).filter(function(x){var p=x[0];
+  return (!d||p[1]===d)&&(!g||p[4])&&(!q||(p[0]+p[1]+p[5]).toLowerCase().indexOf(q)>=0)});
+ $("count").textContent=l.length+" place"+(l.length===1?"":"s")+" found";
+ $("grid").innerHTML=l.length?l.map(function(x){var p=x[0];
+  return '<div class="card">'+ill(p)+'<h3>'+p[0]+'</h3><div><span class="tag">'+p[1]+'</span> '+(p[4]?'<span class="tag gem">Hidden gem</span>':'')+'</div><div class="mut">'+p[5]+'</div><div><button data-i="'+x[1]+'">Details &amp; nearby</button></div></div>'}).join(""):'<p>No places match. Clear the search or choose another district.</p>';
+ Array.prototype.forEach.call($("grid").querySelectorAll("button"),function(b){b.onclick=function(){open(+b.getAttribute("data-i"))}})}
+
+function open(i){
+ var p=P[i];
+ var n=P.map(function(o,j){return [o,j,j===i?1e9:hav(p,o)]}).sort(function(a,b){return a[2]-b[2]}).slice(0,4);
+ var h=ill(p)+'<h2>'+p[0]+'</h2><div><span class="tag">'+p[1]+' district</span> '+(p[4]?'<span class="tag gem">Hidden gem</span>':'')+'</div>'
+ +'<p>'+p[5]+'</p>'
+ +'<a class="btn" target="_blank" rel="noopener" href="'+mapL(p)+'">Open in Google Maps</a>'
+ +'<a class="btn o" target="_blank" rel="noopener" href="https://www.google.com/maps/dir/?api=1&destination='+pt(p)+'&travelmode=driving">Directions from my location</a>'
+ +'<a class="btn sec" target="_blank" rel="noopener" href="'+vidL(p)+'">Watch videos on YouTube</a>'
+ +'<a class="btn sec" target="_blank" rel="noopener" href="'+phL(p)+'">See real photos</a>'
+ +'<h3>Nearest tourism places</h3>'
+ +n.map(function(x){return '<div class="row"><span>'+x[0][0]+'<br><span class="mut">~'+Math.round(x[2])+' km, about '+dur(x[2])+' by car</span></span><a class="btn sec" target="_blank" rel="noopener" href="'+dirL(p,x[0])+'">Route</a></div>'}).join("")
+ +'<h3>Stay and eat nearby</h3>'
+ +'<a class="btn sec" target="_blank" rel="noopener" href="'+nearL("hotels",p)+'">Hotels</a>'
+ +'<a class="btn sec" target="_blank" rel="noopener" href="'+nearL("restaurants",p)+'">Restaurants</a>'
+ +'<a class="btn sec" target="_blank" rel="noopener" href="'+nearL("homestays",p)+'">Homestays</a>'
+ +'<h3>Cabs</h3>'
+ +'<a class="btn sec" target="_blank" rel="noopener" href="https://m.uber.com">Uber</a>'
+ +'<a class="btn sec" target="_blank" rel="noopener" href="https://www.olacabs.com">Ola</a>'
+ +'<a class="btn sec" target="_blank" rel="noopener" href="'+nearL("taxi+service",p)+'">Local taxi operators</a>'
+ +'<h3>Order food (opens the app if it is installed on your phone)</h3>'
+ +'<a class="btn sec" target="_blank" rel="noopener" href="https://www.swiggy.com/restaurants">Swiggy</a><a class="btn sec" target="_blank" rel="noopener" href="https://magicpin.in">Magicpin</a>'
+ +'<a class="btn sec" target="_blank" rel="noopener" href="https://www.zomato.com">Zomato</a><a class="btn sec" target="_blank" rel="noopener" href="https://www.eatsure.com">EatSure</a>'
+ +'<p class="mut" style="font-size:13px">Distances are straight-line estimates plus a road factor. Confirm the exact route and timings in Google Maps. Hotels, restaurants, cabs and food apps open in their own sites.</p>'
+ +'<button id="cl" style="width:100%;margin-top:10px">Close</button>';
+ $("mbox").innerHTML=h;$("modal").classList.remove("hide");
+ $("cl").onclick=function(){$("modal").classList.add("hide")}}
+$("modal").onclick=function(e){if(e.target===$("modal"))$("modal").classList.add("hide")};
+try{var u=localStorage.getItem("ktg_user");if(u)enter(u)}catch(e){}
+</script>
+</body>
+</html>
